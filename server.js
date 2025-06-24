@@ -123,7 +123,7 @@ app.post("/api/send-sms", async (req, res) => {
 // -------------------
 async function dispatchOmniTask(prompt, userId) {
   // Using your new Agent ID
-  const agentId = 2060;
+  const agentId = 2092;
   console.log(`Dispatching prompt to agent ${agentId}...`);
 
   const payload = {
