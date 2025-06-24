@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vāṇi Assistant</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/assistant.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body class="assistant-body">
+    <!-- Close button to return to the main page -->
+    <a href="/" class="close-assistant-btn">&times;</a>
+
+    <!-- Main container for the assistant interface -->
+    <div class="assistant-container">
+      <!-- The entire avatar wrapper is now a clickable button -->
+      <div class="assistant-avatar-wrapper" id="startBtn">
+        <img src="/assets/logo.png" alt="Vani AI" id="assistantAvatar" />
+        <div class="listening-ring" id="listeningRing"></div>
+      </div>
+
+      <!-- New structure for quote and status -->
+      <h1 id="quoteDisplay" class="quote-display">
+        "The best way to predict the future is to create it."
+      </h1>
+      <p id="assistantStatus" class="assistant-status-display">
+        Tap the icon to speak
+      </p>
+
+      <p id="transcript" class="transcript-display"></p>
+    </div>
+
+    <!-- This page will have its own dedicated JavaScript file -->
+    <script type="module" src="/js/assistant.js" defer></script>
+
+    <!-- We still include the Omni widget script, as it powers the underlying AI -->
+    <script
+      id="omnidimension-web-widget"
+      async
+      src="https://backend.omnidim.io/web_widget.js?secret_key=ccea2b1a67d12e4a38c4308b1d2b4aab"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vāṇi Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/assistant.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="/dashboard" class="logo">Vāṇi</a>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="active">
+              <a href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-project-diagram"></i> Integrations</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-comment-dots"></i> Feedback</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-profile">
+            <img
+              id="user-avatar"
+              src="https://placehold.co/40x40/8A7FF8/FFF?text=V"
+              alt="User Avatar"
+            />
+            <div>
+              <span id="user-name">Loading...</span>
+              <p>Personal Assistant</p>
+            </div>
+          </div>
+          <button id="sign-out-btn" class="sign-out-button">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <div class="container-fluid">
+          <header class="main-header">
+            <h1>Dashboard</h1>
+          </header>
+
+          <section class="dashboard-section">
+            <h2>Omni Integration</h2>
+            <p>Trigger a pre-configured call to a test number.</p>
+            <button id="make-call-btn" class="btn btn-primary">
+              Make Test Call
+            </button>
+          </section>
+
+          <section id="voice-activity-feed" class="dashboard-section">
+            <h2>Voice Activity Feed</h2>
+            <div class="activity-item-placeholder">Loading activities...</div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js"
+    ></script>
+    <script type="module" src="/js/dashboard.js"></script>
+
+    <!-- Updated OmniDimension Web Widget Script -->
+    <script
+      id="omnidimension-web-widget"
+      async
+      src="https://backend.omnidim.io/web_widget.js?secret_key=ccea2b1a67d12e4a38c4308b1d2b4aab"
+    ></script>
+  </body>
+</html>
